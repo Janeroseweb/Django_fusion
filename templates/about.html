@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %} about {% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <table class="table animate__animated animate__zoomIn">
+                    <tr>
+                        <th>names</th>
+                        <th>english</th>
+                        <th>chemistry</th>
+                        <th>biology</th>
+                        <th>maths</th>
+                        <th>total</th>
+                    </tr>
+                    {% for score in scores %}
+                    <tr>
+                        <td>{{ score.names }}</td>
+                        <td>{{ score.english }}</td>
+                        <td>{{ score.chemistry }}</td>
+                        <td>{{ score.biology }}</td>
+                        <td>{{ score.maths }}</td>
+                        <td></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_links %}
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+{% endblock %}
+#download professional bootstrap
+#BOOTstrap template
+#convert it into django project
+
